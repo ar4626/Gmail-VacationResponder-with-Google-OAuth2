@@ -16,7 +16,7 @@ async function initializeGmail() {
     oAuth2Client.on('tokens', (tokens) => {
         if (tokens.refresh_token) console.log('Refresh token:', tokens.refresh_token);
         console.log('Access token:', tokens.access_token);
-    });
+    }); 
 
     try {
         oAuth2Client.setCredentials({ refresh_token: refreshToken });
