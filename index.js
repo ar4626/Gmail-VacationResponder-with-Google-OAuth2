@@ -3,11 +3,11 @@ const { google } = require('googleapis');
 const { promisify } = require('util');
 const sleep = promisify(setTimeout);
 
-const client_id = "503618535988-5vvklurfhcb7blupg8vehr3ucplc5rob.apps.googleusercontent.com";
-const client_secret = "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";
-const redirect_uris = ["https://developers.google.com/oauthplayground"];
-const refreshToken = "1//043K74gJZwDyACgYIARAAGAQSNwF-L9IrRnAlZA1ABXKPSnaQmUCto6kNzzY1wy7UzPfC6ghKIDTjHbcElWdf0maITSeRCLsc7KM";
-const SCOPES = ['https://www.googleapis.com/auth/gmail.modify'];
+const client_id = "CLIENT ID";
+const client_secret = "cLIENT sECRET";
+const redirect_uris = REDIRECT URI;
+const refreshToken = REFRESH TOKEN;
+const SCOPES = SCOPE;
 
 // Function to initialize Gmail API
 async function initializeGmail() {
