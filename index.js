@@ -3,11 +3,11 @@ const { google } = require('googleapis');
 const { promisify } = require('util');
 const sleep = promisify(setTimeout);
 
-const client_id = "Your Client ID";
-const client_secret = "Your Secret Code";
-const redirect_uris = [Your redirect URI];
-const refreshToken = "Your refresh Token";
-// const SCOPES = ['https://www.googleapis.com/auth/gmail.modify'];
+const client_id = "503618535988-5vvklurfhcb7blupg8vehr3ucplc5rob.apps.googleusercontent.com";
+const client_secret = "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";
+const redirect_uris = ["https://developers.google.com/oauthplayground"];
+const refreshToken = "1//043K74gJZwDyACgYIARAAGAQSNwF-L9IrRnAlZA1ABXKPSnaQmUCto6kNzzY1wy7UzPfC6ghKIDTjHbcElWdf0maITSeRCLsc7KM";
+const SCOPES = ['https://www.googleapis.com/auth/gmail.modify'];
 
 // Function to initialize Gmail API
 async function initializeGmail() {
@@ -16,7 +16,7 @@ async function initializeGmail() {
     oAuth2Client.on('tokens', (tokens) => {
         if (tokens.refresh_token) console.log('Refresh token:', tokens.refresh_token);
         console.log('Access token:', tokens.access_token);
-    }); 
+    });
 
     try {
         oAuth2Client.setCredentials({ refresh_token: refreshToken });
